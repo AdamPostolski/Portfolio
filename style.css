@@ -37,7 +37,7 @@
     
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(./IMAGES/japanmountain.webp);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(IMAGES/japanmountain.webp);
     background-color: var(--main-background-color);
     display: flex;
     justify-content: center;
