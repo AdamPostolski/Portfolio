@@ -34,7 +34,7 @@
 .main {
     height: 100vh;
     width: 100vw;
-    
+
     background-repeat: no-repeat;
     background-size: cover;
     background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(IMAGES/japanmountain.webp);
@@ -46,7 +46,7 @@
 }
 
 .game-layout {
-    
+
     background-color: var(--game-layout-color);
     width: 520px;
     height: 100vh;
@@ -55,7 +55,7 @@
 
 /* Toast message  */
 #toast-container {
-    
+
     visibility: hidden;
     font-size: 35px;
     font-family: var(--toast-font);
@@ -86,6 +86,7 @@
     animation: notCorrectWord 6s 1 ease-out;
 
 }
+
 @keyframes notCorrectWord {
     0% {
         transform: translateY(-30px);
@@ -110,7 +111,7 @@
 
 /* Main */
 header h1 {
-    
+
     font-size: 60px;
     font-family: var(--font-header);
     text-align: center;
@@ -119,10 +120,10 @@ header h1 {
 
 .entry-letter-row-container {
     margin-top: 50px;
+
 }
 
 .entry-letter-rows {
-
     margin-top: 5px;
     text-align: center;
     display: flex;
@@ -281,4 +282,77 @@ header h1 {
 
 #close:hover {
     cursor: pointer;
+}
+
+@media screen and (max-height: 930px) {
+    .entry-letter-square {
+        height: 45px;
+        width: 45px;
+
+    }
+
+
+
+}
+
+@media screen and (max-height: 820px) {
+    .entry-letter-square {
+        height: 45px;
+        width: 45px;
+
+    }
+
+    .keyboard-main {
+        height: 230px;
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-height: 765px) {
+    .entry-letter-square {
+        height: 40px;
+        width: 40px;
+        
+
+    }
+
+    .keyboard-main {
+        height: 210px;
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-height: 755px) {
+    .entry-letter-square {
+        height: 40px;
+        width: 40px;
+      
+
+    }
+
+    .keyboard-main {
+        height: 210px;
+        width: 100%;
+        margin-top: 40px; 
+    }
+    .entry-letter-row-container{
+        margin-top: 10px;
+    }
+
+
+}
+@media screen and (max-height:725px ) {
+    .entry-letter-square {
+        height: 30px;
+        width: 30px;
+        font-size: 28px;
+
+    }
+
+    
+
 }
