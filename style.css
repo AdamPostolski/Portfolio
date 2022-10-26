@@ -230,12 +230,11 @@ header h1 {
 .modal-content {
     background-color: var(--modal-content-background-color);
     font-family: var(--modal-content-font);
-
     font-weight: bolder;
     position: relative;
     margin: 10% auto;
     width: 18%;
-    height: 40%;
+    height: 360px;
     text-align: center;
     min-width: 250px;
     border: 1px solid #888;
@@ -243,30 +242,35 @@ header h1 {
 }
 
 #close {
+    display: flex;
     font-size: 40px;
     margin: 0;
     margin-left: 75%;
 }
 
 #resultText {
+    
     font-size: 60px;
     margin-bottom: 0px;
 
 }
 
 #correctWordContainer {
+    
     font-size: 40px;
     margin-bottom: 20px;
     color: rgba(6, 83, 250, 0.774)
 }
 
 #correctWord {
+    
     color: rgba(4, 128, 0, 0.808);
     display: block;
     font-size: 50px
 }
 
 #newWord {
+
     background-color: rgba(4, 128, 0, 0.479);
     font-size: 40px;
     font-family: var(--new-word-font);
@@ -330,7 +334,6 @@ header h1 {
     .entry-letter-square {
         height: 40px;
         width: 40px;
-      
 
     }
 
@@ -342,6 +345,12 @@ header h1 {
     .entry-letter-row-container{
         margin-top: 10px;
     }
+    #toast-container {
+    height: 40px;
+    width: 280px;
+    font-size: 28px;
+    
+    }
 
 
 }
@@ -352,7 +361,15 @@ header h1 {
         font-size: 28px;
 
     }
+    .keyboard-button{
+        font-size:15px
+    }
+    #toast-container{
+    height:35px;
+    width:245px;
+    font-size: 24.5px;
 
-    
+    }
+
 
 }
