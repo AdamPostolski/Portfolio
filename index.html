@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9c6c000498.js" crossorigin="anonymous"></script>
+    <script type="module" src="mainScript.js"></script>
+
+</head>
+
+<body>
+    <div class="main">
+
+        <div id="toast-container">
+            <i class="error-symbol fa-solid fa-triangle-exclamation"></i>
+            <div id="toast" class="visible">
+
+                This is toast!
+
+            </div>
+            <i class="error-symbol fa-solid fa-triangle-exclamation"></i>
+        </div>
+        <div class="game-layout">
+            <header>
+                <h1>Wordle</h1>
+            </header>
+            <div class="entry-letter-row-container">
+                <div class="entry-letter-rows">
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                </div>
+                <div class="entry-letter-rows">
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                </div>
+                <div class="entry-letter-rows">
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                </div>
+                <div class="entry-letter-rows">
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                </div>
+                <div class="entry-letter-rows">
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                </div>
+                <div class="entry-letter-rows">
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                    <div class="entry-letter-square"></div>
+                </div>
+            </div>
+            <div class="keyboard-main">
+                <div class="keyboard-row">
+                    <button id="Ą" class="keyboard-button">Ą</button>
+                    <button id="Ć" class="keyboard-button">Ć</button>
+                    <button id="Ę" class="keyboard-button">Ę</button>
+                    <button id="Ł" class="keyboard-button">Ł</button>
+                    <button id="Ó" class="keyboard-button">Ó</button>
+                    <button id="Ś" class="keyboard-button">Ś</button>
+                    <button id="Ń" class="keyboard-button">Ń</button>
+                    <button id="Ż" class="keyboard-button">Ż</button>
+                    <button id="Ź" class="keyboard-button">Ź</button>
+                </div>
+                <div class="keyboard-row">
+                    <button id="Q" class="keyboard-button">Q</button>
+                    <button id="W" class="keyboard-button">W</button>
+                    <button id="E" class="keyboard-button">E</button>
+                    <button id="R" class="keyboard-button">R</button>
+                    <button id="T" class="keyboard-button">T</button>
+                    <button id="Y" class="keyboard-button">Y</button>
+                    <button id="U" class="keyboard-button">U</button>
+                    <button id="I" class="keyboard-button">I</button>
+                    <button id="O" class="keyboard-button">O</button>
+                    <button id="P" class="keyboard-button">P</button>
+                </div>
+                <div class="keyboard-row">
+                    <button id="A" class="keyboard-button">A</button>
+                    <button id="S" class="keyboard-button">S</button>
+                    <button id="D" class="keyboard-button">D</button>
+                    <button id="F" class="keyboard-button">F</button>
+                    <button id="G" class="keyboard-button">G</button>
+                    <button id="H" class="keyboard-button">H</button>
+                    <button id="J" class="keyboard-button">J</button>
+                    <button id="K" class="keyboard-button">K</button>
+                    <button id="L" class="keyboard-button">L</button>
+                </div>
+                <div class="keyboard-row">
+                    <button id="enter" class="keyboard-button">ENTER</button>
+                    <button id="Z" class="keyboard-button">Z</button>
+                    <button id="X" class="keyboard-button">X</button>
+                    <button id="C" class="keyboard-button">C</button>
+                    <button id="V" class="keyboard-button">V</button>
+                    <button id="B" class="keyboard-button">B</button>
+                    <button id="N" class="keyboard-button">N</button>
+                    <button id="M" class="keyboard-button">M</button>
+                    <button id="delete_letter" class="keyboard-button"><i class="fa-solid fa-delete-left"></i></button>
+
+
+                </div>
+
+            </div>
+        </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span id="close">X</span>
+            <p id="resultText"></p>
+            <p id="correctWordContainer">Poprawne hasło to: </p>
+            <button id="newWord">Nowe hasło</button>
+        </div>
+    </div>
+    
+</div>
+    
+    
+
+</body>
+
+</html>

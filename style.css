@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+
+:root {
+    --main-background-color: white;
+
+    --game-layout-color: ;
+
+    --font-header: 'Square Peg', cursive;
+
+    --square-background-color: white;
+    --square-font: 'Square Peg', cursive;
+
+    --keyboard-main-border: white;
+    --keyboard-main-color: ;
+    --keyboard-button-color: white;
+    --keyboard-button-border: 2px solid black;
+    --keyboard-button-border-radius: 2px;
+    --keyboard-button-font: 'Square Peg', cursive;
+
+    --modal-content-background-color: rgba(221, 230, 236, 0.938);
+    --modal-content-font: 'Square Peg', cursive;
+    --new-word-font: 'Square Peg', cursive;
+
+    --toast-background-color: rgba(32, 28, 29, 0.911);
+    --toast-font: 'Square Peg', cursive;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(/IMAGES/japanmountain.webp);
+    background-color: var(--main-background-color);
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
+.game-layout {
+    
+    background-color: var(--game-layout-color);
+    width: 520px;
+    height: 100vh;
+
+}
+
+/* Toast message  */
+#toast-container {
+    
+    visibility: hidden;
+    font-size: 35px;
+    font-family: var(--toast-font);
+    font-weight: bolder;
+    border-radius: 3px;
+    border: 0.1px solid;
+    height: 50px;
+    width: 350px;
+    z-index: 1;
+    color: rgb(243, 11, 11);
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--toast-background-color);
+
+
+}
+
+.error-symbol {
+    font-size: 25px;
+    margin: 10px;
+
+}
+
+#toast-container.visible {
+    visibility: visible;
+    animation: notCorrectWord 6s 1 ease-out;
+
+}
+@keyframes notCorrectWord {
+    0% {
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+
+    25% {
+        transform: translateY(25px);
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.7
+    }
+
+    100% {
+        opacity: 0.2;
+        transform: translateY(-490px)
+    }
+}
+
+
+/* Main */
+header h1 {
+    
+    font-size: 60px;
+    font-family: var(--font-header);
+    text-align: center;
+
+}
+
+.entry-letter-row-container {
+    margin-top: 50px;
+}
+
+.entry-letter-rows {
+
+    margin-top: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+
+
+}
+
+.entry-letter-square {
+    font-family: var(--square-font);
+    font-weight: bolder;
+    background-color: var(--square-background-color);
+    margin: 1px;
+    font-size: 45px;
+    border-style: solid;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* KEYBOARD */
+.keyboard-main {
+    background-color: var(--keyboard-main-color);
+    border: var(--keyboard-main-border);
+    width: 100%;
+    height: 280px;
+    margin-top: 60px;
+}
+
+.keyboard-row {
+    height: 25%;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.keyboard-button {
+    font-family: var(--keyboard-button-font);
+    font-weight: bolder;
+    font-size: 20px;
+    width: 8%;
+    height: 90%;
+    background-color: var(--keyboard-button-color);
+    border: var(--keyboard-button-border);
+    border-radius: var(--keyboard-button-border-radius);
+
+}
+
+.keyboard-button:hover {
+    cursor: pointer;
+
+}
+
+#enter {
+    width: 11%;
+
+}
+
+#delete_letter {
+    font-size: 20px;
+    width: 11%;
+}
+
+.fullCorrectLetter {
+    transition: 0.6s;
+    background-color: rgba(4, 128, 0, 0.808);
+    border: black solid;
+    color: white;
+}
+
+.halfCorrectLetter {
+    transition: 0.6s;
+    background-color: rgba(255, 150, 50, 0.884);
+    border: black solid;
+    color: white;
+}
+
+.notCorrectLetter {
+    transition: 0.6s;
+    background-color: rgba(128, 128, 128, 0.74);
+    border: black solid;
+    color: white;
+}
+
+/* Modal box */
+
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    /*box jest na przodzie*/
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.507);
+    text-align: center;
+}
+
+
+.modal-content {
+    background-color: var(--modal-content-background-color);
+    font-family: var(--modal-content-font);
+
+    font-weight: bolder;
+    position: relative;
+    margin: 10% auto;
+    width: 18%;
+    height: 40%;
+    text-align: center;
+    min-width: 250px;
+    border: 1px solid #888;
+    border-radius: 6px;
+}
+
+#close {
+    font-size: 40px;
+    margin: 0;
+    margin-left: 75%;
+}
+
+#resultText {
+    font-size: 60px;
+    margin-bottom: 0px;
+
+}
+
+#correctWordContainer {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: rgba(6, 83, 250, 0.774)
+}
+
+#correctWord {
+    color: rgba(4, 128, 0, 0.808);
+    display: block;
+    font-size: 50px
+}
+
+#newWord {
+    background-color: rgba(4, 128, 0, 0.479);
+    font-size: 40px;
+    font-family: var(--new-word-font);
+    font-weight: bolder;
+    border-radius: 5px;
+
+
+}
+
+#newWord:hover {
+    cursor: pointer;
+}
+
+#close:hover {
+    cursor: pointer;
+}
