@@ -25,8 +25,6 @@ const drawWordToGuess = function (){
 //Function draws wordToGuess from wordsToGuess list
     if (wordsToGuess != ''){
     wordToGuess = wordsToGuess[Math.floor(Math.random() * wordsToGuess.length)]
-    }else{
-        console.log("Odgadnięto już wszystkie możliwe hasła")
     }
     
 };
